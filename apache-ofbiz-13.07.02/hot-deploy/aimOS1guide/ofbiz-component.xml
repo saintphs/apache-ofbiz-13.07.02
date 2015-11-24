@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ofbiz-component name="aimOS1guide"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/ofbiz-component.xsd">
+	<resource-loader   name="main" type="component"/>
+    <!-- place the config directory on the classpath to access configuration files -->
+    <classpath type="dir" location="config"/>
+    <webapp name="aimOS1guide"
+       title="aimos1 Developement Guide"
+       server="default-server"
+       base-permission="OFBTOOLS"
+       location="webapp/aimOS1guide"
+       mount-point="/aimOS1guide"
+       app-bar-display="true"/>
+</ofbiz-component>

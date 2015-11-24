@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
+    <screen name="main">
+        <section>
+            <widgets>
+                <label text="This is first aimOS1guide"/>
+            </widgets>
+        </section>
+    </screen>
+	<screen name="person">
+        <section>
+           <actions>
+            	 <script location="component://aimOS1guide/webapp/aimOS1guide/WEB-INF/actions/Person.groovy"/>
+           </actions>
+           <widgets>
+            	 <decorator-screen name="CommonaimOS1guideDecorator" location="${parameters.commonDecoratorLocation}">
+                	<decorator-section name="body">
+                    	 <platform-specific>
+                        	   <html>
+                            	<html-template location="component://aimOS1guide/webapp/aimOS1guide/Person.ftl"/>
+                        	   </html>
+                    	 </platform-specific>
+                	</decorator-section>
+             	 </decorator-screen>       
+           </widgets>
+        </section>
+	</screen>
+	<screen name="personForm">
+        <section>
+            <actions>
+                <set field="headerItem" value="personForm"/>
+                <set field="titleProperty" value="PageTitleaimOS1guidePersonForm"/>
+                <entity-condition entity-name="Person" list="persons"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <label text="Person List" style="h2"/>
+                        <include-form name="ListPersons" location="component://aimOS1guide/widget/aimOS1guideForms.xml"></include-form>
+                    </decorator-section>
+                </decorator-screen>       
+            </widgets>
+        </section>
+	</screen>
+</screens>
