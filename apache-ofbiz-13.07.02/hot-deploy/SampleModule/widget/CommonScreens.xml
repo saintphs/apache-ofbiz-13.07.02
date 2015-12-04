@@ -21,10 +21,10 @@ under the License.
 <screens xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-screen.xsd">
 
-	<screen name="CommonaimOS1guideDecorator">
+	<screen name="CommonSampleModuleDecorator">
         <section>
             <widgets>
-                <include-menu location="component://aimOS1guide/widget/aimOS1guideMenus.xml" name="aimOS1guideAppBar"/>
+                <include-menu location="component://SampleModule/widget/SampleModuleMenus.xml" name="SampleModuleAppBar"/>
                 <decorator-section-include name="body"/>
             </widgets>
         </section>
@@ -33,11 +33,11 @@ under the License.
         <section>
             <actions>
                 <property-map resource="CommonUiLabels" map-name="uiLabelMap" global="true"/>
-                <property-map resource="aimOS1guideUiLabels" map-name="uiLabelMap" global="true"/>
-                <set field="layoutSettings.companyName" from-field="uiLabelMap.aimOS1guideCompanyName" global="true"/>
-                <set field="activeApp" value="aimOS1guide" global="true"/>
-                <set field="applicationMenuName" value="aimOS1guideAppBar" global="true"/>
-                <set field="applicationMenuLocation" value="component://aimOS1guide/widget/aimOS1guideMenus.xml" global="true"/>
+                <property-map resource="SampleModuleUiLabels" map-name="uiLabelMap" global="true"/>
+                <set field="layoutSettings.companyName" from-field="uiLabelMap.SampleModuleCompanyName" global="true"/>
+                <set field="activeApp" value="SampleModule" global="true"/>
+                <set field="applicationMenuName" value="SampleModuleAppBar" global="true"/>
+                <set field="applicationMenuLocation" value="component://SampleModule/widget/SampleModuleMenus.xml" global="true"/>
             </actions>
             <widgets>
                 <include-screen name="GlobalDecorator" location="component://common/widget/CommonScreens.xml"/>

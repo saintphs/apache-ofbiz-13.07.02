@@ -4,21 +4,21 @@
     <screen name="main">
         <section>
             <widgets>
-                <label text="This is first aimOS1guide"/>
+                <label text="This is first SampleModule"/>
             </widgets>
         </section>
     </screen>
 	<screen name="person">
         <section>
            <actions>
-            	 <script location="component://aimOS1guide/webapp/aimOS1guide/WEB-INF/actions/Person.groovy"/>
+            	 <script location="component://SampleModule/webapp/SampleModule/WEB-INF/actions/Person.groovy"/>
            </actions>
            <widgets>
-            	 <decorator-screen name="CommonaimOS1guideDecorator" location="${parameters.commonDecoratorLocation}">
+            	 <decorator-screen name="CommonSampleModuleDecorator" location="${parameters.commonDecoratorLocation}">
                 	<decorator-section name="body">
                     	 <platform-specific>
                         	   <html>
-                            	<html-template location="component://aimOS1guide/webapp/aimOS1guide/Person.ftl"/>
+                            	<html-template location="component://SampleModule/webapp/SampleModule/Person.ftl"/>
                         	   </html>
                     	 </platform-specific>
                 	</decorator-section>
@@ -30,14 +30,14 @@
         <section>
             <actions>
                 <set field="headerItem" value="personForm"/>
-                <set field="titleProperty" value="PageTitleaimOS1guidePersonForm"/>
+                <set field="titleProperty" value="PageTitleSampleModulePersonForm"/>
                 <entity-condition entity-name="Person" list="persons"/>
             </actions>
             <widgets>
                 <decorator-screen name="main-decorator" location="${parameters.mainDecoratorLocation}">
                     <decorator-section name="body">
                         <label text="Person List" style="h2"/>
-                        <include-form name="ListPersons" location="component://aimOS1guide/widget/aimOS1guideForms.xml"></include-form>
+                        <include-form name="ListPersons" location="component://SampleModule/widget/SampleModuleForms.xml"></include-form>
                     </decorator-section>
                 </decorator-screen>       
             </widgets>

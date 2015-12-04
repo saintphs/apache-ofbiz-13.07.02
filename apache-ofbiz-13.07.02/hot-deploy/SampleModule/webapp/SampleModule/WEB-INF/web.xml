@@ -20,27 +20,27 @@ under the License.
 -->
 
 <web-app>
-    <display-name>aimOS1 Guide Application - Apache OFBiz</display-name>
-    <description>Example Application of the aimOS1 Project</description>
+    <display-name>SampleModule Guide Application - Apache OFBiz</display-name>
+    <description>Example Application of the SampleModule Project</description>
 
 	<context-param>
     	<param-name>webSiteId</param-name>
-    	<param-value>aimOS1guide</param-value>
+    	<param-value>SampleModule</param-value>
     	<description>A unique ID used to look up the WebSite entity to get information about catalogs, etc.</description>
 	</context-param>
 	<context-param>
      	<param-name>localDispatcherName</param-name>
-     	<param-value>aimOS1guide</param-value>
+     	<param-value>SampleModule</param-value>
      	<description>A unique name used to identify/recognize the local dispatcher for the Service Engine</description>
 	</context-param>
 	<context-param>
     	<param-name>commonDecoratorLocation</param-name>
-    	<param-value>component://aimOS1guide/widget/CommonScreens.xml</param-value>
+    	<param-value>component://SampleModule/widget/CommonScreens.xml</param-value>
     	<description>The location of the common-decorator screen to use for this webapp; referred to as a context variable in screen def XML files.</description>
 	</context-param>
 	<context-param>
      	<param-name>mainDecoratorLocation</param-name>
-     	<param-value>component://aimOS1guide/widget/CommonScreens.xml</param-value>
+     	<param-value>component://SampleModule/widget/CommonScreens.xml</param-value>
      	<!-- change the path to the following if the above doesn't work for you -->
      	<description>The location of the main-decorator screen to use for this webapp; referred to as a context variable in screen def XML files.</description>
 	</context-param> 

@@ -3,7 +3,7 @@
        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/site-conf.xsd">
 	<include location="component://common/webcommon/WEB-INF/common-controller.xml"/>
 
-	<description>aimOS1guide Component Site Configuration File</description>
+	<description>SampleModule Component Site Configuration File</description>
 	<owner>Copyright 2015 AIM Systems co ltd</owner>
 	<errorpage>/error/error.jsp</errorpage>
 
@@ -21,10 +21,16 @@
         <security https="false" auth="false"/>
         <response name="success" type="view" value="personForm"/>
     </request-map>
+    <!-- 2015.12.4 Part3 테스트중 추가 -->
+    <request-map uri="createSampleModulePerson">
+        <security https="true" auth="true"/>
+        <event type="service" invoke="createSampleModulePerson"/>
+        <response name="success" type="view" value="personForm"/>
+    </request-map>
 	<!-- end of request mappings -->
 	<!-- View Mappings -->
-	<view-map name="main" type="screen" page="component://aimOS1guide/widget/aimOS1guideScreens.xml#main"/>
-	<view-map name="person" type="screen" page="component://aimOS1guide/widget/aimOS1guideScreens.xml#person"/>
-    <view-map name="personForm" type="screen" page="component://aimOS1guide/widget/aimOS1guideScreens.xml#personForm"/>
+	<view-map name="main" type="screen" page="component://SampleModule/widget/SampleModuleScreens.xml#main"/>
+	<view-map name="person" type="screen" page="component://SampleModule/widget/SampleModuleScreens.xml#person"/>
+    <view-map name="personForm" type="screen" page="component://SampleModule/widget/SampleModuleScreens.xml#personForm"/>
 	<!-- end of view mappings -->
 </site-conf>
