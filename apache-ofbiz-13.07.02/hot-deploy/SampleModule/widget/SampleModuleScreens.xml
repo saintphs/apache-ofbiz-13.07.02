@@ -43,4 +43,78 @@
             </widgets>
         </section>
 	</screen>
+	<!-- Part3 Writing Events 2015.12.10 추가 -->
+    <screen name="CreateSampleModulePersonEventM">
+        <section>
+            <actions>
+                <set field="headerItem" value="eventMinilang"/>
+                <set field="titleProperty" value="PageTitleSimpleEventForms"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="CommonSampleModuleDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <include-menu location="component://SampleModule/widget/SampleModuleMenus.xml" name="EventMenu"/>
+                        <label text="New Person --- Simple Event" style="h1"/>
+                        <include-form name="CreatePersonSimpleForm" location="component://SampleModule/widget/SampleModuleForms.xml"/>
+                    </decorator-section>
+                </decorator-screen>        
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="CreateSampleModulePersonEventJ">
+        <section>
+            <actions>
+                <set field="headerItem" value="eventJava"/>
+                <set field="titleProperty" value="PageTitleJavaEventForms"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="CommonSampleModuleDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <include-menu location="component://SampleModule/widget/SampleModuleMenus.xml" name="EventMenu"/>
+                        <label text="New Person --- Java Event" style="h1"/>
+                        <include-form name="CreatePersonJavaForm" location="component://SampleModule/widget/SampleModuleForms.xml"/>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
+	<!-- Part3 Writing Events 2015.12.04 추가 -->
+    <screen name="createSampleModulePersonSimpleEvent">
+        <section>
+            <actions>
+                <set field="headerItem" value="eventMinilang"/>
+                <set field="titleProperty" value="PageTitleSimpleEventForms"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="CommonSampleModuleDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <include-menu location="component://SampleModule/widget/SampleModuleMenus.xml" name="EventMenu"/>
+                        <label text="New Person --- Simple Event" style="h1"/>
+                        <include-form name="CreatePersonSimpleForm" location="component://SampleModule/widget/SampleModuleForms.xml"/>
+                    </decorator-section>
+                </decorator-screen>        
+            </widgets>
+        </section>
+    </screen>
+
+    <screen name="createSampleModulePersonJavaEvent">
+        <section>
+            <actions>
+                <set field="headerItem" value="eventJava"/>
+                <set field="titleProperty" value="PageTitleJavaEventForms"/>
+            </actions>
+            <widgets>
+                <decorator-screen name="CommonSampleModuleDecorator" location="${parameters.mainDecoratorLocation}">
+                    <decorator-section name="body">
+                        <include-menu location="component://SampleModule/widget/SampleModuleMenus.xml" name="EventMenu"/>
+                        <label text="New Person --- Java Event" style="h1"/>
+                        <include-form name="CreatePersonJavaForm" location="component://SampleModule/widget/SampleModuleForms.xml"/>
+                    </decorator-section>
+                </decorator-screen>
+            </widgets>
+        </section>
+    </screen>
+
 </screens>

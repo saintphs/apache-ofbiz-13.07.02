@@ -5,5 +5,28 @@
         <menu-item name="main" title="Main"><link target="main"/></menu-item>
         <menu-item name="person" title="Person"><link target="person"/></menu-item>
         <menu-item name="personForm" title="Person Form"><link target="personForm"/></menu-item>
+		<!-- Part3 Writing Events 2015.12.10 추가 -->
+        <menu-item name="events" title="Events"><link target="Events"/></menu-item>
 	</menu>
+	<!-- Part3 Writing Events 2015.12.10 추가 -->
+	<menu name="EventMenu" default-menu-item-name="eventMinilang" default-selected-style="selected"
+         type="simple" menu-container-style="button-bar button-style-1" selected-menuitem-context-field-name="headerItem">
+      <menu-item name="eventMinilang" title="Create Person --- Event MiniLang">
+           <link target="createSampleModulePersonSimpleEvent"/>
+      </menu-item>
+      <menu-item name="eventJava" title="Create Person --- Event Java">
+           <link target="createSampleModulePersonJavaEvent"/>
+      </menu-item>   
+	</menu>
+	
+    <menu name="EcaMenu" default-menu-item-name="seca" default-selected-style="selected" 
+         type="simple" menu-container-style="button-bar button-style-1" selected-menuitem-context-field-name="headerItem">
+         <menu-item name="seca" title="Create Person --- SECA">
+             <link target="Seca"/>
+         </menu-item>
+         <menu-item name="eeca" title="Create Person --- EECA">
+             <link target="Eeca"/>
+         </menu-item>    
+	</menu>
+
 </menus>

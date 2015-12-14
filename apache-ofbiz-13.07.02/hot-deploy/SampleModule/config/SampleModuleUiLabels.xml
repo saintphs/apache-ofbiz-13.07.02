@@ -16,4 +16,8 @@
     	<value xml:lang="en">Smart Factory: SampleModule</value>
     	<value xml:lang="ko_KR">스마트시스템</value>
 	</property>
+	<property key="SampleModuleFirstNameMissingError">
+		<value lang="ko_KR">이름이 잘못 되었습니다.</value>
+	</property>
+
 </resource>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/widget-form.xsd">
+        
     <form name="ListPersons" type="list" list-name="persons" list-entry-name="person" target="updateSampleModulePerson">
         <auto-fields-service service-name="updateSampleModulePerson" default-field-type="edit" map-name="person"/>
         <field name="partyId"><hidden/></field>
@@ -14,7 +15,17 @@
  
     <form name="CreatePerson" type="single" target="createSampleModulePerson">
         <auto-fields-service service-name="createSampleModulePerson"/>
+        <field name="submitButton" title="Create" widget-style="smallSubmit"><submit button-type="button"/></field>
+    </form>
+    <!-- 2015.12.10 Part3 테스트중 추가 -->
+    <form name="CreatePersonSimpleForm" type="single" target="createSampleModulePersonSimpleEvent">
+        <auto-fields-service service-name="createSampleModulePerson"/>
         <field name="submitButton" title="${uiLabelMap.CommonCreate}" widget-style="smallSubmit"><submit button-type="button"/></field>
     </form>
+    <form name="CreatePersonJavaForm" type="single" target="createSampleModulePerson">
+        <auto-fields-service service-name="createSampleModulePerson"/>
+        <field name="submitButton" title="${uiLabelMap.CommonCreate}" widget-style="smallSubmit"><submit button-type="button"/></field>
+    </form>
+
 
 </forms>

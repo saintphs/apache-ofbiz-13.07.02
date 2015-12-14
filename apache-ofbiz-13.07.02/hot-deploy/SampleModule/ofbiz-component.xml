@@ -6,6 +6,9 @@
     <!-- place the config directory on the classpath to access configuration files -->
     <classpath type="dir" location="config"/>
     <!-- 2015.12.4 Part3 테스트중 추가 -->
+    <classpath type="dir" location="script"/>
+    <classpath type="jar" location="build/lib/*"/>
+    <entity-resource type="eca" reader-name="main" loader="main" location="entitydef/eecas.xml"/>
     <service-resource loader="main" location="servicedef/services.xml" type="model" />
 	<webapp name="SampleModule"
        title="SampleModule Developement Guide"
@@ -13,5 +16,5 @@
        base-permission="OFBTOOLS"
        location="webapp/SampleModule"
        mount-point="/SampleModule"
-       app-bar-display="false"/>
+       app-bar-display="true"/>
 </ofbiz-component>
