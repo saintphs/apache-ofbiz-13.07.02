@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<services xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/services.xsd">
+    <description>SampleModule Services</description>
+    <!-- Party related Services -->
+    <service name="createSampleModuleParty" default-entity-name="Party" engine="simple"
+            location="component://SampleModule/script/org/hotwax/SampleModule/SampleModuleServices.xml" invoke="createSampleModuleParty" auth="true">
+        <description>Create a Party</description>
+        <auto-attributes include="pk" mode="OUT" optional="false"/>
+        <auto-attributes include="nonpk" mode="IN" optional="true"/>
+    </service>
+    <service name="updateSampleModuleParty" default-entity-name="Party" engine="simple"
+            location="component://SampleModule/script/org/hotwax/SampleModule/SampleModuleServices.xml" invoke="updateSampleModuleParty" auth="true">
+        <description>Update a Party</description>
+        <auto-attributes include="pk" mode="IN" optional="false"/>
+        <auto-attributes include="nonpk" mode="IN" optional="true"/>
+    </service>
+    <service name="deleteSampleModuleParty" default-entity-name="Party" engine="simple"
+            location="component://SampleModule/script/org/hotwax/SampleModule/SampleModuleServices.xml" invoke="deleteSampleModuleParty" auth="true">
+        <description>Delete a Party</description>
+        <auto-attributes include="pk" mode="IN" optional="false"/>
+    </service>
+    
+    <!-- Person related Services -->
+    <service name="createSampleModulePerson" default-entity-name="Person" engine="simple"
+            location="component://SampleModule/script/org/hotwax/SampleModule/SampleModuleServices.xml" invoke="createSampleModulePerson" auth="true">
+        <description>Create a Person</description>
+        <auto-attributes include="pk" mode="OUT" optional="false"/>
+        <attribute name="salutation" mode="IN" type="String" optional="true"/>
+        <attribute name="firstName" mode="IN" type="String" optional="false"/>
+        <attribute name="middleName" mode="IN" type="String" optional="true"/>
+        <attribute name="lastName" mode="IN" type="String" optional="false"/>
+        <attribute name="suffix" mode="IN" type="String" optional="true"/>
+    </service>
+    <service name="updateSampleModulePerson" default-entity-name="Person" engine="simple"
+            location="component://SampleModule/script/org/hotwax/SampleModule/SampleModuleServices.xml" invoke="updateSampleModulePerson" auth="true">
+        <description>Update a person</description>
+        <auto-attributes include="pk" mode="IN" optional="false"/>
+        <attribute name="firstName" mode="IN" type="String" optional="false"/>
+        <attribute name="middleName" mode="IN" type="String" optional="true"/>
+        <attribute name="lastName" mode="IN" type="String" optional="false"/>
+    </service>
+    <service name="deleteSampleModulePerson" default-entity-name="Person" engine="simple"
+            location="component://SampleModule/script/org/hotwax/SampleModule/SampleModuleServices.xml" invoke="deleteSampleModulePerson" auth="true">
+        <description>Delete a Person</description>
+        <auto-attributes include="pk" mode="IN" optional="false"/>
+    </service>
+        
+    
+</services>
