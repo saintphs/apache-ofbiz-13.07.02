@@ -18,11 +18,11 @@
         <field name="submitButton" title="Create" widget-style="smallSubmit"><submit button-type="button"/></field>
     </form>
     <!-- 2015.12.10 Part3 테스트중 추가 -->
-    <form name="CreatePersonSimpleForm" type="single" target="createSampleModulePersonSimpleEvent">
+    <form name="CreatePersonSimpleForm" type="single" target="CreateSampleModulePersonEventM">
         <auto-fields-service service-name="createSampleModulePerson"/>
         <field name="submitButton" title="${uiLabelMap.CommonCreate}" widget-style="smallSubmit"><submit button-type="button"/></field>
     </form>
-    <form name="CreatePersonJavaForm" type="single" target="createSampleModulePerson">
+    <form name="CreatePersonJavaForm" type="single" target="CreateSampleModulePersonEventJ">
         <auto-fields-service service-name="createSampleModulePerson"/>
         <field name="submitButton" title="${uiLabelMap.CommonCreate}" widget-style="smallSubmit"><submit button-type="button"/></field>
     </form>

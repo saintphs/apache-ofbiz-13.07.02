@@ -4,7 +4,7 @@
 	<include location="component://common/webcommon/WEB-INF/common-controller.xml"/>
 
 	<description>SampleModule Component Site Configuration File</description>
-	<owner>Copyright 2015 AIM Systems co ltd</owner>
+	<owner>Copyright 2015 Beautiful Maker</owner>
 	<errorpage>/error/error.jsp</errorpage>
 
 
@@ -23,49 +23,38 @@
     </request-map>
     <!-- 2015.12.10 Part3 테스트중 추가 -->
     <request-map uri="Events">
-        <security https="false" auth="true"/>
+        <security https="false" auth="false"/>
         <response name="success" type="view" value="CreateSampleModulePersonEventM"/>
     </request-map>
     <request-map uri="CreateSampleModulePersonEventM">
         <security https="false" auth="true"/>
-        <response name="success" type="view" value="CreateSampleModulePersonEventM"/>
+    	<event type="simple" path="component://SampleModule/script/org/hotwax/SampleModule/SampleModuleEvents.xml" invoke="CreateSampleModulePersonEventM"/>
+    	<response name="success" type="view" value="CreateSampleModulePersonEventM"/>
     </request-map>
     <request-map uri="CreateSampleModulePersonEventJ">
         <security https="false" auth="true"/>
+    	<event type="java" path="org.hotwax.SampleModule.SampleModuleEvents" invoke="createSampleModulePersonJavaEvent"/>
         <response name="success" type="view" value="CreateSampleModulePersonEventJ"/>
     </request-map>
     <!-- 2015.12.4 Part3 테스트중 추가 -->
     <request-map uri="createSampleModulePerson">
-        <security https="true" auth="true"/>
+        <security https="false" auth="false"/>
         <event type="service" invoke="createSampleModulePerson"/>
         <response name="success" type="view" value="personForm"/>
     </request-map>
     <request-map uri="updateSampleModulePerson">
-        <security https="true" auth="true"/>
+        <security https="false" auth="false"/>
         <event type="service" invoke="updateSampleModulePerson"/>
         <response name="success" type="view" value="personForm"/>
         <response name="error" type="view" value="personForm"/>
     </request-map>
     <request-map uri="deleteSampleModulePerson">
-        <security https="true" auth="true"/>
+        <security https="false" auth="false"/>
         <event type="service" invoke="deleteSampleModulePerson"/>
         <response name="success" type="view" value="personForm"/>
         <response name="error" type="view" value="personForm"/>
     </request-map>
-	<!-- Part3 Writing Events 2015.12.04 추가 -->
-	<request-map uri="createSampleModulePersonSimpleEvent">
-    	<security https="true" auth="true"/>
-    	<event type="simple" path="component://SampleModule/script/org/hotwax/SampleModule/SampleModuleEvents.xml" invoke="createSampleModulePersonSimpleEvent"/>
-    	<response name="success" type="view" value="createSampleModulePersonSimpleEvent"/>
-    	<response name="error" type="view" value="createSampleModulePersonSimpleEvent"/>
-	</request-map>
 
-	<request-map uri="createSampleModulePersonJavaEvent">
-    	<security https="true" auth="true"/>
-    	<event type="java" path="org.hotwax.SampleModule.SampleModuleEvents" invoke="createSampleModulePersonJavaEvent"/>
-    	<response name="success" type="view" value="createSampleModulePersonJavaEvent"/>
-    	<response name="error" type="view" value="createSampleModulePersonJavaEvent"/>
-	</request-map>
 
 	<!-- end of request mappings -->
 	<!-- View Mappings -->
@@ -77,7 +66,6 @@
     <view-map name="CreateSampleModulePersonEventM" type="screen" page="component://SampleModule/widget/SampleModuleScreens.xml#CreateSampleModulePersonEventM"/>
     <view-map name="CreateSampleModulePersonEventJ" type="screen" page="component://SampleModule/widget/SampleModuleScreens.xml#CreateSampleModulePersonEventJ"/>
 
-    <view-map name="createSampleModulePersonSimpleEvent" type="screen" page="component://SampleModule/widget/SampleModuleScreens.xml#createSampleModulePersonSimpleEvent"/>
-    <view-map name="createSampleModulePersonJavaEvent" type="screen" page="component://SampleModule/widget/SampleModuleScreens.xml#createSampleModulePersonJavaEvent"/>
+
 	<!-- end of view mappings -->
 </site-conf>

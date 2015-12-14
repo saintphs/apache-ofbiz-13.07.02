@@ -2,7 +2,8 @@
 
 <simple-methods xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:noNamespaceSchemaLocation="http://ofbiz.apache.org/dtds/simple-methods.xsd">
-    <simple-method method-name="createSampleModulePersonSimpleEvent" short-description="Create Person" login-required="true">
+        
+    <simple-method method-name="CreateSampleModulePersonEventM" short-description="Create Person" login-required="true">
         <call-map-processor in-map-name="parameters" out-map-name="createPersonContext">
             <simple-map-processor name="createPersonMap">
                 <process field="firstName">
